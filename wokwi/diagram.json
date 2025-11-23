@@ -1,0 +1,44 @@
+  "version": 1,
+  "author": "Invernadero IoT - ESP32",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -60,
+      "left": 260,
+      "attrs": { "temperature": "25", "humidity": "55" }
+    },
+    {
+      "type": "wokwi-soil-moisture-sensor",
+      "id": "soil",
+      "top": 160,
+      "left": 260
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay",
+      "top": 150,
+      "left": -160
+    }
+  ],
+  "connections": [
+    ["dht:VCC", "esp:3V3", "red"],
+    ["dht:GND", "esp:GND.1", "black"],
+    ["dht:SDA", "esp:15", "green"],
+
+    ["soil:VCC", "esp:3V3", "red"],
+    ["soil:GND", "esp:GND.2", "black"],
+    ["soil:SIG", "esp:34", "blue"],
+
+    ["relay:VCC", "esp:5V", "red"],
+    ["relay:GND", "esp:GND.2", "black"],
+    ["relay:IN", "esp:13", "yellow"]
+  ]
+}
