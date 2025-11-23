@@ -62,5 +62,5 @@ invernadero/riego
 ---
 
 ## 👨‍💻 Autor
-Fernando I.  
+Daniel Fernando I.  
 Ingeniería de Sistemas
